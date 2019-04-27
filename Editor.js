@@ -20,7 +20,7 @@ export default class Editor extends Component {
   render() {
     return (
       <div>
-        <textarea id="editor" onInput={this.onEditorHandler}></textarea>
+        <textarea id="editor" onInput={this.onEditorHandler} value={this.props.defaultText}></textarea>
       </div>
     )
   }

@@ -3,13 +3,12 @@ import { render } from 'react-dom';
 import { Preview } from './Preview';
 import Editor from './Editor';
 import './style.css';
-
 class App extends Component {
   constructor() {
     super();
     this.state = {
       name: 'React',
-      editorText: ''
+      editorText: 'dsfsf'
     };
   }
 
@@ -22,7 +21,7 @@ class App extends Component {
     return (
       <div>
         <Preview editorText={this.state.editorText} />
-        <Editor emitInputText={this.getEditorText} />
+        <Editor defaultText={this.state.editorText} emitInputText={this.getEditorText} />
       </div>
     );
   }
