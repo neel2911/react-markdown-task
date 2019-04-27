@@ -1,27 +1,28 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
-import Hello from './Hello';
-import './style.css';
-import Preview from './Preview'; 
+import { Preview } from './Preview';
 import Editor from './Editor';
+import './style.css';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      name: 'React'
+      name: 'React',
+      editorText: ''
     };
+  }
+
+  getEditorText = (inputText) => {
+    this.setState({ editorText: inputText });
+    console.log(this.state.editorText);
   }
 
   render() {
     return (
       <div>
-        <Hello name={this.state.name} />
-        <Preview />
-        <Editor />
-        <p>
-          Start editing to see some magic happen :)
-        </p>
+        <Preview editorText={this.state.editorText} />
+        <Editor emitInputText={this.getEditorText} />
       </div>
     );
   }
