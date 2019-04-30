@@ -7,23 +7,30 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 class App extends Component {
 
-  defaultText = `
-    # This is main Header..! (h1 size)
-    
-    ## This is sub header..! (h2 size)
-    ### This is smaller sub header (h3 size)
-    There\'s also [links](https://www.freecodecamp.com)
-    Heres some code, \`<div></div>\`, between 2 backticks
-    - And of course there are lists.
-      - Some are bulleted.
-        - With different indentation levels.
-          - That look like this. 
-    > Block Quotes!
-    ![React Logo w/ Text](https://goo.gl/Umyytc)
-    You can also make text **bold**... whoa!
-    Or _italic_.
-    Or... wait for it... **_both!_**
-    `;
+  defaultText = `# This is main Header..! (h1 size)
+## This is sub header..! (h2 size)
+### This is smaller sub header (h3 size)
+There\'s also [links](https://www.freecodecamp.com)
+Heres some code, \`<div></div>\`, between 2 backticks
+\`\`\`
+function foo() {
+console.log('Neel patel');
+}
+\`\`\`
+> Block Quotes!
+
+You can also make text **bold**... whoa!
+
+Or _italic_.
+
+Or... wait for it... **_both!_**
+![React Logo w/ Text](https://goo.gl/Umyytc)
+- And of course there are lists.
+  - Some are bulleted.
+    - With different indentation levels.
+      - That look like this. 
+
+`;
 
   constructor() {
     super();

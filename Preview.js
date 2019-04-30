@@ -8,6 +8,8 @@ const Preview = (props) => {
   renderer.link = function (href, title, text) {
     return `<a target="_blank" href="${href}">${text}` + '</a>';
   }
+
+  console.log(marked(props.textValue, { renderer: renderer }));
   return (
     <div>
       <div id="preview" dangerouslySetInnerHTML={{ __html: marked(props.textValue, { renderer: renderer }) }} />
